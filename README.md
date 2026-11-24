@@ -108,4 +108,4 @@ Set `DATABASE_URL` if your Postgres isn't at `postgres://postgres:postgres@local
 
 ## Author
 
-**David Vera** · QA Engineer (manual + automation) · [LinkedIn](https://www.linkedin.com/in/david-vera-qa)
+**David** · QA Engineer (manual + automation) · [LinkedIn](https://www.linkedin.com/in/david-vera-qa)
