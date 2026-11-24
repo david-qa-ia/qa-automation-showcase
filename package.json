@@ -1,0 +1,51 @@
+{
+  "name": "qa-automation-showcase",
+  "version": "1.0.0",
+  "description": "Full-stack test automation showcase: Playwright (UI + API), Postman/Newman and SQL data-integrity tests against a real app with PostgreSQL, wired into GitHub Actions.",
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts",
+    "db:reset": "tsx scripts/db-reset.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:db": "playwright test --project=db",
+    "test:e2e": "playwright test --project=e2e-chromium",
+    "test:postman": "newman run postman/ShopLite.postman_collection.json -e postman/local.postman_environment.json --reporters cli,junit --reporter-junit-export reports/newman-junit.xml",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "api-testing",
+    "postman",
+    "newman",
+    "sql",
+    "postgresql",
+    "qa-automation",
+    "github-actions"
+  ],
+  "author": "David Vera",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "newman": "^6.2.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}
